@@ -1,0 +1,12 @@
+[Unit]
+Description=Discord Counter Bot
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/discord-counter-bot
+ExecStart=/home/ubuntu/venv/bin/python /home/ubuntu/discord-counter-bot/discord_counter_bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
